@@ -14,7 +14,7 @@ jobs = Queue()
 AWS_ACCESS_KEY_ID = 'AKIAIYN4ARZAG5NOW4DQ'
 AWS_SECRET_ACCESS_KEY = '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'
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='static',static_url_path='/static')
 conn = boto.connect_s3(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
 
 def check_auth(username, password):
