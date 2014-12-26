@@ -356,11 +356,11 @@
 			overflow: hidden;
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5), inset 0px 2px 1px 0px rgba(255,255,255,0.75);
 			background: #363b55;
-			background-image:	url('images/bg.png'),		-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background-image:	url('/static/css/images/bg.png'),		-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background-image:	url('/static/css/images/bg.png'),		-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background-image:	url('/static/css/images/bg.png'),		-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background-image:	url('/static/css/images/bg.png'),		-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background-image:	url('/static/css/images/bg.png'),		linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
 			-moz-transition: background-color .2s ease-in-out;
 			-webkit-transition: background-color .2s ease-in-out;
 			-o-transition: background-color .2s ease-in-out;
@@ -460,11 +460,11 @@
 
 					ul.social li a:before {
 						background-color: #444;
-						background-image: url('images/bg.png'),		-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-						background-image: url('images/bg.png'),		-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-						background-image: url('images/bg.png'),		-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-						background-image: url('images/bg.png'),		-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-						background-image: url('images/bg.png'),		linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+						background-image: url('/static/css/images/bg.png'),		-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+						background-image: url('/static/css/images/bg.png'),		-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+						background-image: url('/static/css/images/bg.png'),		-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+						background-image: url('/static/css/images/bg.png'),		-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+						background-image: url('/static/css/images/bg.png'),		linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
 						border-radius: 6px;
 						box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255,255,255,0.1);
 						color: #2E2E2E !important;
@@ -603,7 +603,7 @@
 
 	.wrapper
 	{
-		background-image: url('images/bg.png');
+		background-image: url('/static/css/images/bg.png');
 		box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.05), inset 0px 2px 3px 0px rgba(0,0,0,0.1);
 	}
 
@@ -636,10 +636,19 @@
 				text-shadow: 1.2px 1.2px 0px #593317;
 			}
 
-		.wrapper.kategori{
-			background-image: url('images/parke.png');
+		.wrapper.giris{
+			background: url(./images/giris.jpg) no-repeat center center fixed; 
+			 -webkit-background-size: cover;
+			 -moz-background-size: cover;
+			 -o-background-size: cover;
+			 background-size: cover;
 		}
-		
+
+		.wrapper.kategori{
+			background-image: url('./images/parke.png');
+			box-shadow: 0 -30px 120px rgba(0,0,0,0.6); 
+		}
+
 		.wrapper.style3
 		{
 			background-color: #f4f4f4;
@@ -665,6 +674,7 @@
 
 			.wrapper.style4 form input[type=text],
 			.wrapper.style4 form input[type=password],
+			.wrapper.style4 form input[type=email],
 			.wrapper.style4 form select,
 			.wrapper.style4 form textarea
 			{
@@ -674,6 +684,7 @@
 
 			.wrapper.style4 form input[type=text]:focus,
 			.wrapper.style4 form input[type=password]:focus,
+			.wrapper.style4 form input[type=email]:focus,
 			.wrapper.style4 form select:focus,
 			.wrapper.style4 form textarea:focus
 			{
@@ -745,11 +756,6 @@
 		{
 			border-radius: 50%;
 		}
-
-			#top .image img
-			{
-				border-radius: 50%;
-			}
 
 		#top p
 		{
