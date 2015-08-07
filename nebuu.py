@@ -46,19 +46,23 @@ def listing():
     keys = [link(k.name) for k in sorted(bucket.get_all_keys(),key=lambda e:e.last_modified,reverse=True)]
     return '<!doctype html><html><body>'+'<br/>'.join(keys)+'</body></html>'
    
-
+@app.route('/ota')
+@requires_auth
+def ota():
+    return render_template('ota.html')
 
 def consume_uploads():
     while True:
         job = jobs.get()
 
         bucket = conn.create_bucket('video.nebuu.com',location=boto.s3.connection.Location.DEFAULT)
-
+        
         k = Key(bucket)
-        k.key = "%d_video_%s.m4v"%(job[0],timestamp())
+        k.key = "%s_video_%d.m4v"%(job[0],timestamp())
         k.set_contents_from_filename('./%s'%job[1].name)
         k.set_acl("public-read")
         os.remove('./%s'%job[1].name)
+
         time.sleep(1)
 
 @app.route('/upload/',methods=['POST'])
