@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Nebuu-Bold";
+  src: url("/static/fonts/GothamRounded-Bold.otf");
+}
+
+@font-face {
+  font-family: "Nebuu";
+  src: url("/static/fonts/GothamRounded-Book.otf");
+}
+
+body {
+  background-color: #fcfcfc;
+  font-family: "Nebuu";
+  font-size: 16px;
+  color: #96aaa8;
+  overflow: hidden;
+}
+
+.center-div {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 75vh;
+  border-radius: 3vmin;
+  line-height: 1.4em;
+}
+
+.category {
+  font-family: "Nebuu-Bold";
+  color: #0094c6;
+}
+
+.unit {
+  font-family: "Nebuu";
+  font-size: 2.1em;
+  margin: 0;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+}
+
+#count {
+  font-family: "Nebuu-Bold";
+  font-size: 20vmin;
+  line-height: 1.4em;
+  color: #e09157;
+  margin: 16px 0px;
+  animation: fadein 1.5s;
+  white-space: nowrap;
+  font-smoothing: antialiased;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+.select-style {
+    display: inline-block;
+    font-family: "Nebuu-Bold";
+    white-space: nowrap;
+    color: #0094c6;
+    padding: 0;
+    margin: 0;
+    border: none;
+    vertical-align: baseline;
+}
+
+#filter .select-style {
+    margin-left: -8px;
+}
+
+
+.select-style select {   
+    border: none;
+    box-shadow: none;
+    font-family: "Nebuu-Bold";
+    color: #0094c6;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+    background-image: none;
+    vertical-align: baseline;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+[type="date"] {
+  border: none;
+  background-color: #fff;
+  padding: 0px;
+  width: 0px;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 420px) {
+
+    .select-style {
+        width: 100%;
+    }
+
+    .center-div {
+      width: 100vw;
+      height: 90vh;
+    }
+}
+
+.hourglass{
+  width:48px;
+  height: 48px;
+  opacity: 0;
+}
+
+fieldset {
+  border: none;
+}
